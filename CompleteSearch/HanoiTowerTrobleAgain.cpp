@@ -2,10 +2,10 @@
 
 using namespace std;
 
-int T, N, total;
+int T, N, tot;
 vector<int> peg(100, 0);
 
-void Backtracking(int v, int p);
+void Backtracking(int v, int p)
 {
     if(p == N) return;
     if(peg[p] == 0)
@@ -34,9 +34,9 @@ int main()
     scanf("%d", &T);
     while(T--)
     {
-        scanf("%d, &N");
+        scanf("%d", &N);
         tot = 0;
         Backtracking(1, 0);
-        cout << tot << endl;
+        printf("%d\n", tot);
     }
 }
