@@ -22,10 +22,9 @@ int main()
         {
             if(smap.find(a) != smap.end())
                 cout << smap[a];
-            else if(((int) a +  N) > 90)
-                cout << (char)(64 + ((int) a +  N) - 90);
-            else
-                cout << (char)(((int) a) + N); 
+            else 
+                cout << (char)((a-'A' + N) % 26 + 'A');
+            
         }
         cout << endl; 
     }
