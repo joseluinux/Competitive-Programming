@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define MAXD 100100
+#define MAXD 1000100
 #define MAXN 100100
 bool light[MAXD];
 int r[MAXD];
@@ -16,6 +16,8 @@ void inc (int p, int k)
 }
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     // Sieve of Eratosthenes
     for(int i = 2; i < MAXD; i++)
     {
@@ -30,7 +32,7 @@ int main()
 
     int n, k; cin >> n;
     int resp = 0;
-    cnt[0] = n;
+    cnt[0] = MAXD;
     for(int i = 0; i < n; i ++)
     {
         cin >> k;
